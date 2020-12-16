@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/backgroundColor"
+        tools:context="com.example.desafiodigitalhouse.view.activity.MenuActivity">
+
+        <com.github.siyamed.shapeimageview.CircularImageView
+            android:id="@+id/ivProfilePhotoMenu"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/no_photo_placeholder"
+            android:scaleType="centerCrop"
+            android:layout_margin="5dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/tvNameMenu"/>
+
+        <TextView
+            android:id="@+id/tvNameMenu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Herói"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:layout_margin="8dp"
+            app:layout_constraintEnd_toEndOf="@id/ivProfilePhotoMenu"
+            app:layout_constraintTop_toBottomOf="@id/ivProfilePhotoMenu"
+            app:layout_constraintStart_toStartOf="@id/ivProfilePhotoMenu"
+            app:layout_constraintBottom_toTopOf="@id/rvMenu"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvMenu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:itemCount="1"
+            tools:listitem="@layout/recyclerview_cards_hqs"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvNameMenu"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

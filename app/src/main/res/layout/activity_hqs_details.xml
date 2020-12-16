@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/backgroundColor"
+        tools:context="com.example.desafiodigitalhouse.view.activity.HqsDetailsActivity">
+
+
+        <ImageView
+            android:id="@+id/ivBackDropHq"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:alpha="0.5"
+            android:contentDescription="BackDrop"
+            android:scaleType="centerCrop"
+            android:src="@drawable/marvel_placeholder"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <ImageView
+            android:id="@+id/ivArrowBackHq"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:src="@drawable/ic_baseline_arrow_back_24"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <com.github.siyamed.shapeimageview.RoundedImageView
+            android:id="@+id/ivImageHq"
+            style="@style/RecyclerViewImageDefault"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/marvel_placeholder"
+            android:scaleType="centerCrop"
+            app:siBorderColor="@color/white"
+            app:siBorderType="stroke"
+            app:siBorderWidth="3dp"
+            app:layout_constraintStart_toStartOf="@id/ivArrowBackHq"
+            app:layout_constraintTop_toBottomOf="@id/ivArrowBackHq"
+            app:layout_constraintBottom_toTopOf="@+id/tvTitleHq"/>
+
+        <Button
+            android:id="@+id/btComicDetails"
+            style="@style/ButtonDefault"
+            android:visibility="gone"
+            android:enabled="true"
+            android:layout_marginStart="10dp"
+            android:text="@string/string_details_comic"
+            app:layout_constraintStart_toEndOf="@id/ivImageHq"
+            app:layout_constraintTop_toBottomOf="@id/ivBackDropHq"
+            app:layout_constraintBottom_toBottomOf="@id/ivImageHq"
+            />
+
+        <TextView
+            android:id="@+id/tvTitleHq"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textSize="25sp"
+            android:text="Homem Aranha"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            android:textColor="@color/white"
+            app:layout_constraintStart_toStartOf="@id/ivArrowBackHq"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ivImageHq"/>
+
+        <TextView
+            android:id="@+id/tvDescriptionHq"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:layout_marginTop="20dp"
+            android:textColor="@color/white60"
+            app:layout_constraintStart_toStartOf="@id/ivArrowBackHq"
+            app:layout_constraintEnd_toEndOf="@id/tvTitleHq"
+            app:layout_constraintTop_toBottomOf="@id/tvTitleHq"/>
+
+
+        <TextView
+            android:id="@+id/tvPriceHq"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:text="Price: R$ 20,00"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/white60"
+            app:layout_constraintStart_toStartOf="@id/ivArrowBackHq"
+            app:layout_constraintTop_toBottomOf="@id/tvDescriptionHq"/>
+
+        <TextView
+            android:id="@+id/tvPagesHq"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:text="Páginas: 115"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/white60"
+            app:layout_constraintStart_toStartOf="@id/ivArrowBackHq"
+            app:layout_constraintTop_toBottomOf="@id/tvPriceHq"/>
+
+        <TextView
+            android:id="@+id/tvCreatorsTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/string_creators"
+            android:textSize="25sp"
+            android:textColor="@color/white"
+            android:layout_marginTop="20dp"
+            app:layout_constraintStart_toStartOf="@id/ivArrowBackHq"
+            app:layout_constraintTop_toBottomOf="@id/tvPagesHq"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvCreators"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:itemCount="1"
+            android:layout_marginTop="5dp"
+            tools:listitem="@layout/recyclerview_creators"
+            app:layout_constraintStart_toStartOf="@id/ivArrowBackHq"
+            app:layout_constraintTop_toBottomOf="@id/tvCreatorsTitle"
+            app:layout_constraintEnd_toEndOf="@id/tvTitleHq"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

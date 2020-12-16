@@ -1,0 +1,52 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.DesafioTresDigitalHouse" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/redMarvel</item>
+        <item name="colorPrimaryVariant">@color/redMarvel</item>
+        <item name="colorOnPrimary">@color/backgroundColor</item>
+        <item name="colorOnSurface">@color/redMarvel</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/redMarvel</item>
+        <item name="colorSecondaryVariant">@color/redMarvel</item>
+        <item name="colorOnSecondary">@color/backgroundColor</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+        <!-- Customize your theme here. -->
+    </style>
+
+    <style name="TextInputDefault" >
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColorHint">@color/redMarvel</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="boxBackgroundColor">@color/white</item>
+        <item name="errorTextColor">@color/errorColor</item>
+        <item name="errorIconTint">@color/errorColor</item>
+    </style>
+
+    <style name="ButtonDefault" >
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="textAllCaps">false</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:enabled">false</item>
+    </style>
+
+    <style name="TextViewWelcomeTitleDefault">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:text">@string/string_welcome_title</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">25sp</item>
+        <item name="android:layout_margin">15dp</item>
+    </style>
+
+    <style name="RecyclerViewImageDefault" >
+        <item name="android:layout_width">120dp</item>
+        <item name="android:layout_height">180dp</item>
+        <item name="android:layout_margin">10dp</item>
+    </style>
+</resources>

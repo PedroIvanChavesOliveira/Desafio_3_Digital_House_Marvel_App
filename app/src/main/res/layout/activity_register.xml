@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context="com.example.desafiodigitalhouse.view.activity.RegisterActivity"
+        android:background="@color/backgroundColor">
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cvRegister"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            app:cardBackgroundColor="@color/redMarvel"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <com.github.siyamed.shapeimageview.CircularImageView
+                    android:id="@+id/ivProfilePhoto"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/no_photo_placeholder"
+                    android:scaleType="centerCrop"
+                    android:layout_margin="5dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toTopOf="@id/cvLogInInformationsRegister"/>
+
+                <ImageButton
+                    android:id="@+id/ibAddPhoto"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/redMarvel"
+                    android:layout_marginStart="5dp"
+                    android:src="@drawable/ic_baseline_person_add_25"
+                    app:layout_constraintStart_toEndOf="@id/ivProfilePhoto"
+                    app:layout_constraintBottom_toBottomOf="@id/ivProfilePhoto"/>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/cvLogInInformationsRegister"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/ivProfilePhoto"
+                    app:layout_constraintBottom_toBottomOf="parent">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/tilNameRegister"
+                            style="@style/TextInputDefault"
+                            android:layout_margin="10dp"
+                            android:hint="@string/string_name"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintBottom_toTopOf="@id/tilEmailRegister">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/tietNameRegister"
+                                android:inputType="textPersonName"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:tag="@string/string_name"
+                                />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/tilEmailRegister"
+                            style="@style/TextInputDefault"
+                            android:hint="@string/string_email"
+                            android:layout_marginBottom="10dp"
+                            app:layout_constraintStart_toStartOf="@id/tilNameRegister"
+                            app:layout_constraintEnd_toEndOf="@id/tilNameRegister"
+                            app:layout_constraintTop_toBottomOf="@id/tilNameRegister"
+                            app:layout_constraintBottom_toTopOf="@id/tilPasswordRegister">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/tietEmailRegister"
+                                android:inputType="textEmailAddress"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:tag="@string/string_email"
+                                />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/tilPasswordRegister"
+                            style="@style/TextInputDefault"
+                            android:layout_marginBottom="50dp"
+                            android:hint="@string/string_password"
+                            app:layout_constraintStart_toStartOf="@id/tilEmailRegister"
+                            app:layout_constraintEnd_toEndOf="@id/tilEmailRegister"
+                            app:layout_constraintBottom_toTopOf="@+id/btRegister"
+                            app:layout_constraintTop_toBottomOf="@id/tilEmailRegister">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/tietPasswordRegister"
+                                android:inputType="textPassword"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:tag="@string/string_password"
+                                />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <Button
+                            android:id="@+id/btRegister"
+                            style="@style/ButtonDefault"
+                            android:layout_marginBottom="10dp"
+                            android:text="@string/string_register"
+                            app:layout_constraintStart_toStartOf="@id/tilEmailRegister"
+                            app:layout_constraintEnd_toEndOf="@id/tilEmailRegister"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
